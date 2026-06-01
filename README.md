@@ -11,10 +11,15 @@ Una Prueba de Concepto (PoC) desarrollada como desafío técnico orientado al Go
 ## Arquitectura y Tecnologías
 * **Frontend:** Streamlit (interfaz de usuario rápida y limpia).
 * **Modelo LLM:** Google Gemini 2.5 Flash (Vía API oficial).
-* **Procesamiento de Textos:** `RecursiveCharacterTextSplitter` de LangChain (para fragmentar los documentos de manera inteligente).
+* **Procesamiento de Textos:** `RecursiveCharacterTextSplitter` de LangChain (para fragmentar los documentos).
 * **Embeddings:** `HuggingFaceEmbeddings` utilizando el modelo local open-source `sentence-transformers/all-MiniLM-L6-v2`.
 * **Base de Datos Vectorial:** ChromaDB (almacenamiento y búsqueda semántica local).
 * **Entorno de Desarrollo:** Geany + Python.
+
+## Decisiones de Arquitectura: ¿Por qué Vectorial y no Relacional?
+A diferencia de los sistemas tradicionales basados en SQL, este asistente está diseñado para procesar **datos no estructurados**. 
+* **Uso de archivos `.txt`:** Permite una ingesta rápida y directa de los manuales oficiales y normativas sin necesidad de forzar la información en esquemas rígidos de tablas y columnas.
+* **ChromaDB como Motor Vectorial:** En lugar de realizar búsquedas por palabras clave exactas (como haría una base de datos relacional), ChromaDB convierte los textos en vectores matemáticos (Embeddings). Esto le permite al chatbot realizar **búsquedas semánticas**, entendiendo el contexto y la intención detrás de la pregunta del usuario, incluso si no usa las palabras exactas del documento.
 
 ## Reglas de Negocio Incorporadas
 1. **Priorización de Contexto:** El asistente responde basándose estrictamente en los documentos `.txt` de la carpeta local.
