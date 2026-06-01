@@ -1,10 +1,10 @@
 # 🏛️ Asistente Virtual GCBA - Gestión de Datos (RAG)
 
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=Streamlit&logoColor=white)
-![Google Gemini](https://img.shields.io/badge/Google%20Gemini-8E75FA?style=for-the-badge&logo=googlegemini&logoColor=white)
-![Hugging Face](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-FFD21E?style=for-the-badge)
-![MIT License](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)
+![Python](https://img.shields.io/badge/Python-3.12-blue)
+![Streamlit](https://img.shields.io/badge/Streamlit-App-red)
+![Gemini](https://img.shields.io/badge/Gemini-2.5_Flash-orange)
+![Hugging Face](https://img.shields.io/badge/Hugging_Face-Embeddings-yellow)
+![License](https://img.shields.io/badge/License-MIT-green)
 
 Una Prueba de Concepto (PoC) desarrollada como desafío técnico orientado al Gobierno de la Ciudad de Buenos Aires. Este proyecto implementa un chatbot inteligente utilizando una arquitectura RAG (Retrieval-Augmented Generation) para responder consultas precisas sobre normativas y gestión de datos basándose en documentos locales de texto.
 
@@ -26,4 +26,27 @@ Una Prueba de Concepto (PoC) desarrollada como desafío técnico orientado al Go
 ### 1. Descargar el proyecto
 Para copiar estos archivos a tu computadora, abrí tu consola de comandos (CMD o Terminal) y ejecutá el siguiente comando:
 ```bash
-git clone [https://github.com/REEMPLAZA_CON_TU_USUARIO/REEMPLAZA_CON_TU_REPOSITORIO.git]
+git clone [https://github.com/REEMPLAZA_CON_TU_USUARIO/REEMPLAZA_CON_TU_REPOSITORIO.git](https://github.com/REEMPLAZA_CON_TU_USUARIO/REEMPLAZA_CON_TU_REPOSITORIO.git)
+```
+### 2. Instalar las dependencias
+Una vez dentro de la carpeta del proyecto, instalá todas las librerías necesarias ejecutando el siguiente comando en tu consola:
+```bash
+pip install -r requirements.txt
+```
+### 3. Configurar tus credenciales
+Para que el chatbot pueda conectarse con el modelo de Inteligencia Artificial de forma segura, tenes que configurar tu clave de API siguiendo estos pasos:
+1. Buscá el archivo llamado `.env.example` en la carpeta raíz del proyecto.
+2. Renombralo borrándole la extensión `.example` para que quede exactamente como `.env`.
+3. Abrilo con tu editor de texto e ingresá tu clave de Google Gemini de la siguiente manera:
+```text
+GOOGLE_API_KEY=tu_api_key_aqui
+```
+
+### 4. Lanzar la aplicación
+Listo! Ya podés iniciar el servidor local de Streamlit para que la interfaz visual del chatbot se abra automáticamente en tu navegador web:
+```bash
+streamlit run app.py
+```
+
+## ⚠️ Limitaciones de la Versión Gratuita
+Al utilizar la capa gratuita de la API de Google Gemini, el sistema cuenta con restricciones en la cantidad de consultas permitidas por minuto (Requests Per Minute) y no soporta ráfagas masivas de preguntas en simultáneo. Este asistente fue desarrollado como una Prueba de Concepto (PoC) con fines demostrativos y académicos, por lo que está optimizado para pruebas funcionales individuales y no para un entorno de producción de alta demanda.
