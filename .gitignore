@@ -1,0 +1,18 @@
+# Mis claves privadas 
+.env
+
+# Carpetas de la base de datos local (que se generen en cada compu)
+db_gcba
+*chroma.sqlite3
+
+# Archivos temporales que genera Python al correr la app
+__pycache__/
+*.pyc
+
+# Carpetas del entorno virtual (si usas uno)
+venv/
+.venv/
+
+# Basura del sistema operativo (Windows/Mac)
+.DS_Store
+Thumbs.db
