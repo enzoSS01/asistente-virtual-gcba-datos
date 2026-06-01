@@ -1,0 +1,39 @@
+--- 1. OBJETIVO DEL MANUAL DE ESTANDARES ---
+Establecer las reglas, convenciones tecnicas y buenas practicas para la creacion, almacenamiento y gestion de bases de datos en el GCBA. Este manual garantiza que la informacion del gobierno sea uniforme, consistente, de alta calidad y facil de integrar entre diferentes ministerios y sistemas informaticos.
+
+--- 2. CONVENCION DE NOMBRES (NAMING CONVENTIONS) ---
+Para nombrar tablas, columnas y variables en las bases de datos del gobierno, se deben respetar estrictamente las siguientes reglas:
+- Formato Snake Case: Usar siempre letras minusculas y separar las palabras con guiones bajos (ejemplo: fecha_nacimiento, tipo_documento, codigo_postal).
+- Prohibiciones de caracteres: Queda totalmente prohibido el uso de espacios en blanco, letras mayusculas, tildes, la letra eñe (usar n) y caracteres especiales (!, @, #, $).
+- Claridad descriptiva: Los nombres deben ser evidentes por si mismos. Se deben evitar abreviaturas incomprensibles (por ejemplo, es obligatorio usar 'direccion_paciente' en lugar del confuso 'dir_pac').
+
+--- 3. FORMATOS DE FECHAS Y TIEMPOS ---
+El estandar obligatorio para almacenar fechas y horas en todas las bases de datos gubernamentales es la norma internacional ISO 8601. Esto permite el ordenamiento cronologico correcto en consultas SQL:
+- Fechas (Date): Deben guardarse en el formato AAAA-MM-DD (Ejemplo: 2026-04-03).
+- Fechas con hora (Timestamp): Deben guardarse en el formato AAAA-MM-DD HH:MM:SS (Ejemplo: 2026-04-03 14:30:00).
+- Prohibicion: Queda terminantemente prohibido guardar fechas como texto libre o en formatos locales (DD/MM/AAAA) que generen conflictos al cruzar tablas.
+
+--- 4. TRATAMIENTO DE VALORES NULOS Y VACIOS ---
+Para mantener la integridad referencial y la calidad analitica, se define lo siguiente:
+- Valores Nulos (NULL): Representan la ausencia total de un valor o que el dato es desconocido. Se deben usar en las tablas cuando el ciudadano no proporciono la informacion.
+- Cadenas Vacias (' '): No deben usarse para simular un campo vacio en columnas de texto. Si no hay dato, debe registrarse estrictamente como NULL.
+- Ceros (0): El numero cero es un valor matematico valido y no debe usarse jamas para reemplazar un valor NULL o indicar que falta un dato.
+
+--- 5. ESTANDARIZACION DE DATOS MAESTROS Y DE REFERENCIA ---
+Ciertos datos comunes que se repiten en todo el gobierno deben seguir diccionarios de datos centralizados:
+- Genero: Se debe utilizar una tabla de referencia de un solo caracter (M para Masculino, F para Femenino, X para No Binario u otros).
+- Ubicacion Geografica: Para identificar paises y provincias, se deben utilizar los codigos estandarizados de la norma ISO 3166 (ejemplo: el codigo para Argentina es AR).
+
+--- 6. CALIDAD Y LIMPIEZA DE DATOS (DATA CLEANSING) ---
+Antes de ingestar datos en un Data Lake o Data Warehouse del GCBA, los ingenieros de datos deben realizar rutinas de limpieza:
+- Eliminar registros duplicados usando claves primarias (Primary Keys).
+- Eliminar espacios en blanco al principio y al final de las cadenas de texto (funcion TRIM).
+- Validar que los campos de DNI contengan unicamente valores numericos, sin puntos ni guiones.
+
+--- 7. CODIGO SEGMENTADO ---
+Este ChatBot de consulta de estandares y normativas se realizo con Python. La arquitectura se basa en el flujo RAG (Generacion Aumentada por Recuperacion), utilizando LangChain como orquestador, una base de datos vectorial local basada en ChromaDB para el almacenamiento semantico, y el modelo de lenguaje Gemini para el razonamiento y formulacion de las respuestas.
+
+--- 8. PROPOSITO Y FUNCIONALIDAD DEL CHATBOT CONSULTOR ---
+Este ChatBot fue disenado como un asistente inteligente exclusivo para los equipos del GCBA. Su objetivo es democratizar el conocimiento tecnico y legal sobre la gestion de la informacion.
+- Utilidad Principal: Facilitar a los analistas, ingenieros y funcionarios el acceso rapido, preciso y conversacional a las normativas de Gobernanza de Datos, la Ley de Proteccion de Datos Personales y los estandares de arquitectura.
+- Funcionalidad Principal: A traves de su sistema de Generacion Aumentada por Recuperacion (RAG), el bot comprende la intencion detras de la consulta del usuario en lenguaje natural, rastrea semanticamente la respuesta dentro de la documentacion oficial aprobada, y formula una explicacion tecnica asegurando que los proyectos del gobierno cumplan con las reglas de privacidad y calidad.

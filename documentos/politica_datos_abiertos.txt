@@ -1,0 +1,32 @@
+--- 1. DEFINICION Y OBJETIVO DE LOS DATOS ABIERTOS ---
+Los datos abiertos (Open Data) son datos digitales de caracter publico que son puestos a disposicion con las caracteristicas tecnicas y juridicas necesarias para que puedan ser usados, reutilizados y redistribuidos libremente por cualquier persona, en cualquier momento y lugar. El objetivo de la apertura de datos en el GCBA es fomentar la transparencia activa, la participacion ciudadana, la rendicion de cuentas y la innovacion en el sector privado.
+
+--- 2. PRINCIPIOS DE LA CARTA INTERNACIONAL DE DATOS ABIERTOS ---
+Toda iniciativa de datos publicos debe regirse por los siguientes principios internacionales:
+- Abiertos por defecto: Toda la informacion gubernamental se presume publica y abierta, salvo excepciones justificadas por ley.
+- Oportunos y exhaustivos: Los datos deben publicarse rapidamente, con alta frecuencia de actualizacion y en su forma original, sin modificaciones que alteren su esencia.
+- Accesibles y utilizables: Deben estar en portales centralizados (como BA Data) de facil acceso y descarga gratuita para cualquier ciudadano, sin requerir registro previo.
+- Comparables e interoperables: Deben usar estandares que permitan cruzar la informacion con otras bases de datos gubernamentales o internacionales.
+
+--- 3. FORMATOS TECNICOS Y ESTANDARES ---
+Para garantizar que los datos puedan ser leidos y procesados por maquinas (machine-readable), se establecen normas estrictas sobre los tipos de archivos a utilizar:
+- Formatos recomendados (Abiertos): Se debe priorizar el uso de CSV (valores separados por comas), JSON (JavaScript Object Notation), XML, y la creacion de APIs publicas.
+- Formatos desaconsejados (Cerrados): Queda prohibida la publicacion de datos estructurados en formatos como PDF, imagenes (JPG/PNG) o documentos de texto escaneados, ya que impiden el procesamiento automatico y la extraccion de la informacion.
+
+--- 4. LICENCIAS DE USO Y REUTILIZACION ---
+Los conjuntos de datos (datasets) publicados por el gobierno se rigen bajo licencias abiertas, equivalentes a Creative Commons Atribucion (CC BY).
+- Uso permitido: Los ciudadanos, investigadores y empresas pueden usar los datos para fines comerciales y no comerciales, crear aplicaciones, investigaciones o periodismo de datos.
+- Obligacion del usuario: La unica condicion legal para la reutilizacion de la informacion es mencionar al GCBA como fuente original de los datos.
+
+--- 5. EXCEPCIONES A LA APERTURA DE DATOS ---
+No toda la informacion del gobierno puede ser publicada en portales de datos abiertos. Queda estrictamente prohibida la publicacion de:
+- Datos personales y sensibles protegidos por la Ley 25.326.
+- Informacion que comprometa la seguridad publica, la defensa nacional o las relaciones internacionales.
+- Datos protegidos por secreto bancario, fiscal o estadistico.
+- Informacion que vulnere el secreto comercial o la propiedad intelectual de terceros.
+Todo dataset que contenga informacion sobre personas debe pasar por un proceso de anonimizacion irreversible antes de su publicacion.
+
+--- 6. CALIDAD, METADATOS Y DICCIONARIOS DE DATOS ---
+La publicacion no consiste solo en subir archivos. Para que un dataset sea util, debe cumplir con normas de calidad y documentacion:
+- Metadatos: Cada conjunto de datos debe estar acompanado de informacion sobre los datos mismos (quien los publico, fecha de creacion, frecuencia de actualizacion, cobertura geografica).
+- Diccionario de Datos: Es obligatorio adjuntar un documento anexo que explique el significado exacto de cada columna del dataset, las unidades de medida utilizadas y los codigos internos (por ejemplo, si la columna "estado_civil" tiene un "1", el diccionario debe aclarar que "1" significa "Soltero").

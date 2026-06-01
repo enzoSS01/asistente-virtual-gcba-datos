@@ -1,0 +1,33 @@
+--- 1. DEFINICION Y OBJETIVOS DE LA GOBERNANZA DE DATOS ---
+La gobernanza de datos es el conjunto de politicas, procesos, roles y metricas que aseguran el uso eficiente y seguro de la informacion en el GCBA. Su objetivo principal es tratar a los datos como un activo estrategico del gobierno, garantizando que sean precisos, confiables y esten disponibles para la toma de decisiones, cumpliendo siempre con las normativas legales vigentes.
+
+--- 2. ROLES Y RESPONSABILIDADES (DAMA-DMBOK) ---
+Para asegurar el control y la calidad de la informacion, se deben asignar roles claros dentro de cada ministerio o area:
+- Propietario de los Datos (Data Owner): Es la maxima autoridad de un area de negocio. Es responsable de la clasificacion de la informacion, define la sensibilidad de los datos y aprueba quien puede acceder a ellos.
+- Custodio de los Datos (Data Steward): Es el experto funcional o de negocio. Se encarga de definir las reglas de calidad, crear el glosario de terminos de su area y asegurar que los datos representen fielmente la realidad operativa.
+- Custodio Tecnico (Data Custodian): Es el perfil de tecnologia (IT o Ingeniero de Datos). Se encarga del almacenamiento fisico, la seguridad de las bases de datos, el flujo de integracion (ETL) y la ejecucion de los respaldos (backups).
+
+--- 3. DIMENSIONES DE LA CALIDAD DE DATOS ---
+La gobernanza exige que los datos utiles para el Estado cumplan con las siguientes metricas de calidad:
+- Exactitud: Los datos deben reflejar correctamente el evento o entidad real que describen de los ciudadanos o de la gestion.
+- Completitud: No deben faltar datos obligatorios. Todos los campos criticos deben estar completos, minimizando el uso de valores nulos o vacios.
+- Consistencia: La informacion debe ser coherente en todos los sistemas. Si un ciudadano actualiza su domicilio en una dependencia, este cambio debe verse reflejado o integrado en el resto de los sistemas vinculados.
+- Oportunidad: Los datos deben estar disponibles y actualizados en el momento exacto en que se necesitan para operar o tomar decisiones.
+
+--- 4. CICLO DE VIDA DE LA INFORMACION ---
+La gobernanza de datos aplica sobre todas las etapas de la vida de un registro, de principio a fin:
+- Creacion e Ingesta: Cuando el dato ingresa por primera vez al sistema del gobierno (por ejemplo, a traves de un formulario web, un censo o una API).
+- Almacenamiento y Mantenimiento: El guardado en bases de datos seguras, servidores locales o en la nube, incluyendo las rutinas de limpieza (Data Cleansing).
+- Uso y Analitica: La explotacion de los datos mediante tableros de control (dashboards), reportes gerenciales o modelos de Inteligencia Artificial.
+- Archivo y Destruccion: Los datos inactivos deben archivarse para liberar espacio. Si expira su periodo de retencion legal estipulado, deben ser eliminados o destruidos de forma segura e irreversible.
+
+--- 5. COMITE DE GOBERNANZA DE DATOS ---
+Es el organo colegiado responsable de supervisar la estrategia general de datos del GCBA. Sus funciones principales incluyen:
+- Aprobar el manual de estandares y las politicas de seguridad y privacidad a nivel gubernamental.
+- Resolver conflictos entre distintos ministerios por el uso, la integracion o la propiedad de la informacion cruzada.
+- Priorizar los proyectos tecnologicos de modernizacion y de arquitectura de datos para optimizar el presupuesto.
+
+--- 6. ALFABETIZACION DE DATOS (DATA LITERACY) ---
+La tecnologia y los procesos no son suficientes sin las personas adecuadas. El GCBA debe promover de manera continua la alfabetizacion de datos en sus equipos:
+- Capacitacion: Entrenar a los empleados publicos para que tengan la capacidad de leer, trabajar, analizar y argumentar utilizando datos en su dia a dia.
+- Cultura Data-Driven: Fomentar que el diseño de politicas publicas y las decisiones gubernamentales se basen rigurosamente en evidencia y metricas objetivas, abandonando la gestion basada en la intuicion.

@@ -1,0 +1,31 @@
+--- 1. DEFINICION Y OBJETIVO DE LA LIMPIEZA DE DATOS ---
+La limpieza de datos (Data Cleansing o Data Scrubbing) es el proceso tecnico de detectar, corregir o eliminar registros corruptos, inexactos, mal formateados, duplicados o incompletos dentro de una base de datos o data lake del GCBA. Su objetivo es garantizar que la informacion utilizada para reportes, tableros de control o modelos predictivos sea altamente confiable y no genere decisiones erroneas.
+
+--- 2. METRICAS TECNICAS DE CALIDAD DE DATOS ---
+Para evaluar tecnicamente un conjunto de datos, el ingeniero o analista debe medir:
+- Validez: El grado en que los datos cumplen con las reglas de negocio o formatos definidos (ejemplo: un DNI debe tener 8 digitos numericos, sin letras; un email debe tener una arroba).
+- Unicidad: Garantizar que no existan multiples registros para la misma entidad en una misma tabla (evitar ciudadanos o expedientes duplicados).
+- Integridad Referencial: Asegurar que las relaciones entre tablas sean validas (ejemplo: si un paciente tiene un codigo de hospital asignado en su registro, ese codigo debe existir obligatoriamente en la tabla maestra de hospitales).
+
+--- 3. FASES DEL PROCESO DE LIMPIEZA (ETL) ---
+El saneamiento de datos debe ejecutarse preferentemente de forma automatizada en las tuberias de datos (Pipelines):
+- Perfilado (Data Profiling): Analisis inicial estadistico para descubrir anomalias, contar valores nulos y entender la distribucion real de los datos antes de limpiarlos.
+- Parseo y Extraccion: Separar campos combinados en multiples columnas (ejemplo: separar una columna sucia llamada "apellido_y_nombre" en dos columnas distintas "apellido" y "nombre").
+- Estandarizacion: Llevar todos los datos a un formato comun dictado por el manual de estandares (ejemplo: aplicar TRIM para borrar espacios accidentales y pasar todos los textos a un mismo formato de mayusculas o minusculas).
+
+--- 4. REGLAS DE ESTANDARIZACION DE CAMPOS COMUNES ---
+Al procesar informacion de ciudadanos, se aplican las siguientes reglas duras:
+- Correos Electronicos: Deben ser convertidos a minusculas, eliminar espacios en blanco al inicio y al final, y validar mediante expresiones regulares que contengan un formato valido.
+- Numeros Telefonicos: Deben almacenarse unicamente con caracteres numericos, eliminando guiones, parentesis y espacios. Se debe estandarizar el codigo de pais y area.
+- Direcciones Domiciliarias: Se deben normalizar usando diccionarios geograficos oficiales del gobierno, separando obligatoriamente calle, altura, piso, departamento y codigo postal.
+
+--- 5. DEDUPLICACION Y EL REGISTRO DORADO (GOLDEN RECORD) ---
+Cuando se integran datos de distintos ministerios, es comun que una misma persona aparezca varias veces. Para resolverlo se usa la tecnica de Master Data Management (MDM):
+- Identificacion (Matching): Usar algoritmos de coincidencia exacta (cruce por DNI) o difusa (nombres con errores de tipeo) para detectar que dos filas diferentes representan a la misma persona.
+- Supervivencia (Survivorship): Reglas logicas para decidir que dato se conserva al fusionar registros (ejemplo: si hay dos direcciones para una persona, conservar la que tenga la fecha de actualizacion mas reciente).
+- Registro Dorado (Golden Record): Es la fila final consolidada, unica y totalmente limpia que servira como la "unica fuente de la verdad" para todo el gobierno.
+
+--- 6. AUTOMATIZACION Y MONITOREO CONTINUO ---
+La limpieza no es un evento de una sola vez, sino un proceso de monitoreo continuo:
+- Alertas de Calidad: Los sistemas deben generar notificaciones automaticas si el porcentaje de valores nulos o errores en una tabla critica supera el umbral permitido por el negocio (ejemplo: mas del 5% de campos vacios).
+- Cuarentena de Datos: Los registros nuevos que no pasen las validaciones tecnicas de formato deben ser bloqueados y enviados a una tabla temporal de "cuarentena" para su revision manual, evitando que contaminen la base de datos principal de produccion.

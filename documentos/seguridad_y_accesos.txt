@@ -1,0 +1,40 @@
+--- 1. PRINCIPIOS GENERALES DE SEGURIDAD DE LA INFORMACION ---
+La seguridad de la informacion en el GCBA se basa en la triada "CID":
+- Confidencialidad: Garantizar que la informacion sea accesible unicamente por aquellas personas autorizadas.
+- Integridad: Proteger la exactitud y totalidad de la informacion, evitando modificaciones no autorizadas o accidentales.
+- Disponibilidad: Asegurar que los usuarios autorizados tengan acceso a la informacion y a los recursos relacionados toda vez que lo requieran.
+
+--- 2. GESTION DE ACCESOS Y PRIVILEGIOS ---
+El control de acceso a las bases de datos y sistemas debe regirse estrictamente por los siguientes conceptos:
+- Principio de Menor Privilegio (PoLP): Todo usuario, aplicacion o proceso debe tener asignados unicamente los permisos minimos e indispensables para cumplir con sus funciones laborales, ni uno mas.
+- Acceso Basado en Roles (RBAC): Los permisos no se asignan a personas individuales, sino a roles (ejemplo: Rol Analista, Rol Auditor, Rol Administrador). Las personas se asignan a dichos roles.
+- Revocacion Inmediata: Cuando un empleado cambia de puesto o finaliza su relacion laboral con el GCBA, sus accesos deben ser bloqueados o revocados de manera automatica e inmediata.
+
+--- 3. AUTENTICACION Y GESTION DE CONTRASENAS ---
+Para verificar la identidad de los usuarios que acceden a sistemas gubernamentales se deben cumplir las siguientes politicas:
+- Autenticacion Multifactor (MFA): Es obligatorio el uso de un segundo factor de autenticacion (como un codigo SMS, token en aplicacion movil o llave fisica) para todos los accesos a bases de datos y sistemas criticos.
+- Complejidad de Contrasenas: Las claves deben tener un minimo de 12 caracteres, combinando letras mayusculas, minusculas, numeros y caracteres especiales.
+- Prohibicion de Compartir: Las credenciales de acceso son estrictamente personales e intransferibles. Queda prohibido el uso de cuentas genericas o compartidas (ejemplo: admin_gcba) para acciones que requieran auditoria.
+
+--- 4. CRIPTOGRAFIA Y PROTECCION DE DATOS ---
+Para proteger la informacion contra accesos no autorizados mediante interceptacion o robo de equipos:
+- Cifrado en Transito: Toda comunicacion de datos a traves de redes (internas o internet) debe estar cifrada utilizando protocolos seguros como TLS 1.2 o superior (HTTPS).
+- Cifrado en Reposo: Los datos sensibles almacenados en servidores, bases de datos, discos duros y dispositivos moviles deben estar cifrados mediante algoritmos robustos (ejemplo: AES-256).
+- Enmascaramiento de Datos: En los entornos de desarrollo o pruebas (testing), los datos reales deben ser ofuscados o enmascarados para evitar la exposicion de informacion productiva.
+
+--- 5. TRAZABILIDAD Y AUDITORIA (LOGS) ---
+Es obligatorio mantener un registro detallado de las actividades realizadas en los sistemas para garantizar la trazabilidad:
+- Registro de Eventos: Los sistemas deben guardar logs que respondan a: quien accedio, a que hora, desde que direccion IP y que accion realizo (lectura, escritura, borrado).
+- Inmutabilidad: Los registros de auditoria deben ser inalterables. Ni siquiera los administradores de sistemas deben tener permisos para borrar o modificar los logs.
+- Retencion: Los logs de seguridad deben conservarse por un periodo minimo establecido por la normativa vigente para permitir investigaciones forenses.
+
+--- 6. TRABAJO REMOTO Y ACCESO A REDES ---
+Las politicas para el acceso a la informacion del GCBA desde ubicaciones externas son:
+- Red Privada Virtual (VPN): Todo acceso remoto a la infraestructura del gobierno debe realizarse a traves de una VPN corporativa con autenticacion fuerte (MFA).
+- Equipos Corporativos: El acceso a bases de datos criticas solo debe realizarse desde equipos provistos y gestionados por el GCBA. Queda prohibida la descarga de datos sensibles en dispositivos personales (BYOD).
+
+--- 7. GESTION DE INCIDENTES DE SEGURIDAD ---
+Ante cualquier sospecha de brecha de seguridad, robo de credenciales, o acceso no autorizado:
+- Reporte Inmediato: El empleado debe notificar la situacion de manera urgente al Centro de Operaciones de Seguridad (SOC) o al Oficial de Seguridad de la Informacion.
+- Contencion: El equipo de seguridad tendra la potestad de aislar equipos de la red, bloquear cuentas o suspender accesos temporales para contener la amenaza.
+- Prohibicion de Ocultamiento: Ocultar o demorar el reporte de un incidente de seguridad se considera una falta grave que compromete a toda la organizacion.

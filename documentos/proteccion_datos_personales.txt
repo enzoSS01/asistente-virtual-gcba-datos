@@ -1,0 +1,51 @@
+--- 1. MARCO LEGAL Y AUTORIDAD DE APLICACION ---
+La proteccion de los datos personales en Argentina esta regulada por la Ley Nacional N 25.326 (Ley de Proteccion de Datos Personales). 
+El objetivo de esta ley es proteger integralmente los datos personales asentados en archivos, registros o bancos de datos, sean publicos o privados, para garantizar el derecho al honor y a la intimidad de las personas.
+La autoridad de aplicacion y control a nivel nacional es la Agencia de Acceso a la Informacion Publica (AAIP). Este ente es el encargado de fiscalizar, recibir denuncias y aplicar sanciones en caso de incumplimiento de la ley.
+
+--- 2. DEFINICIONES FUNDAMENTALES ---
+- Datos Personales: Toda informacion de cualquier tipo referida a personas fisicas o de existencia ideal (empresas) determinadas o determinables. Ejemplos: nombre, DNI, direccion, telefono, correo electronico.
+- Datos Sensibles: Datos personales que revelan origen racial y etnico, opiniones politicas, convicciones religiosas, filosoficas o morales, afiliacion sindical e informacion referente a la salud o a la vida sexual.
+- Titular de los Datos: Toda persona fisica o juridica cuyos datos sean objeto de tratamiento.
+- Responsable de la Base de Datos: Persona fisica o ideal, publica o privada, que es dueña de la base de datos y decide sobre su finalidad y uso.
+- Tratamiento de Datos: Cualquier operacion o procedimiento tecnico que permita la recoleccion, conservacion, ordenacion, almacenamiento, modificacion, evaluacion, bloqueo o destruccion de datos personales.
+
+--- 3. PRINCIPIOS GENERALES PARA EL TRATAMIENTO DE DATOS ---
+Todo proyecto de gestion de datos del GCBA debe respetar los siguientes principios inquebrantables:
+- Principio de Calidad: Los datos deben ser ciertos, adecuados, pertinentes y no excesivos en relacion al ambito y finalidad para los que se hubieren obtenido.
+- Principio de Finalidad: Los datos no pueden ser utilizados para finalidades distintas o incompatibles con aquellas que motivaron su obtencion. 
+- Principio de Destruccion: Los datos deben ser destruidos cuando hayan dejado de ser necesarios o pertinentes a los fines para los cuales hubiesen sido recolectados.
+- Principio de Consentimiento: El tratamiento de datos personales es ilicito si no media el consentimiento libre, expreso e informado del titular.
+
+--- 4. EXCEPCIONES AL CONSENTIMIENTO ---
+No sera necesario solicitar el consentimiento del ciudadano para tratar sus datos unicamente en los siguientes casos:
+- Cuando los datos se obtengan de fuentes de acceso publico irrestricto.
+- Cuando los datos se recaben para el ejercicio de funciones propias de los poderes del Estado (ejemplo: seguridad publica, recaudacion de impuestos, censos oficiales).
+- Cuando se trate de listados cuyos datos se limiten a: nombre, documento nacional de identidad, identificacion tributaria, ocupacion, fecha de nacimiento y domicilio.
+- Cuando deriven de una relacion contractual, cientifica o profesional, y sean necesarios para su desarrollo.
+- Cuando se trate de operaciones que realicen entidades financieras bajo la ley aplicable.
+
+--- 5. DERECHOS DE LOS CIUDADANOS (DERECHOS ARCO) ---
+El ciudadano tiene el control absoluto sobre sus datos y puede ejercer los derechos ARCO en cualquier momento:
+- Derecho de Acceso: Todo ciudadano puede solicitar y obtener informacion sobre sus datos personales incluidos en los bancos de datos publicos o privados. La informacion debe ser provista en un plazo maximo de 10 dias corridos.
+- Derecho de Rectificacion y Actualizacion: Si los datos son falsos o estan desactualizados, el ciudadano puede exigir su correccion. El responsable tiene un plazo maximo de 5 dias habiles para hacerlo.
+- Derecho de Supresion (Cancelacion): El ciudadano puede exigir que sus datos sean eliminados de una base de datos si considera que estan siendo mal utilizados o ya no son necesarios.
+- Derecho de Oposicion: Facultad del titular de los datos de oponerse al tratamiento de sus datos personales para fines especificos (por ejemplo, encuestas o publicidad).
+
+--- 6. TRATAMIENTO ESPECIAL DE DATOS SENSIBLES ---
+La regla general es que ninguna persona puede ser obligada a proporcionar datos sensibles.
+Los datos sensibles solo pueden ser recolectados y objeto de tratamiento cuando medien razones de interes general autorizadas por ley. 
+Los establecimientos sanitarios publicos o privados (hospitales, clinicas) y los profesionales de la salud pueden recolectar y tratar los datos personales relativos a la salud fisica o mental de los pacientes, siempre que respeten el secreto profesional.
+
+--- 7. OBLIGACIONES DE SEGURIDAD Y CONFIDENCIALIDAD ---
+- Deber de Seguridad: El responsable de la base de datos debe adoptar las medidas tecnicas y organizativas necesarias para garantizar la seguridad y confidencialidad de los datos, evitando su alteracion, perdida, consulta o tratamiento no autorizado.
+- Deber de Confidencialidad (Secreto): Toda persona que intervenga en cualquier fase del tratamiento de datos personales esta obligada al secreto profesional de por vida. Esta obligacion subsiste aun despues de finalizada su relacion con el GCBA o el titular del archivo.
+
+--- 8. ANONIMIZACION Y SEUDONIMIZACION EN GOBIERNO ---
+Para la apertura de datos gubernamentales (Open Data) se deben aplicar tecnicas para proteger la identidad:
+- Anonimizacion: Es el proceso mediante el cual un dato personal es modificado de tal forma que ya no puede ser asociado a una persona especifica de ninguna manera, ni siquiera cruzando bases de datos. Los datos anonimizados ya no son considerados datos personales.
+- Seudonimizacion: Consiste en reemplazar el nombre o DNI por un codigo o identificador falso. La diferencia con la anonimizacion es que el proceso es reversible: el dueño de la base de datos conserva una "llave" para volver a identificar a la persona si fuera necesario.
+
+--- 9. CESION Y TRANSFERENCIA DE DATOS ---
+Los datos personales solo pueden ser cedidos a terceros para el cumplimiento de fines directamente relacionados con el interes de quien cede y del que recibe, y siempre con el consentimiento previo del titular de los datos.
+Queda expresamente prohibida la transferencia internacional de datos personales a paises que no proporcionen niveles de proteccion adecuados, salvo excepciones aprobadas por la AAIP o bajo contratos especificos de confidencialidad.
