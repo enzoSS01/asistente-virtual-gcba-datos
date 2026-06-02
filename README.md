@@ -49,10 +49,12 @@ GOOGLE_API_KEY=tu_api_key_aqui
 ```
 
 ### 4. Lanzar la aplicación
-Listo! Ya podés iniciar el servidor local de Streamlit. Ejecutá este último comando **en la misma consola/terminal** y la interfaz visual del chatbot se abrirá automáticamente en tu navegador web:
+Listo! Ya podés iniciar el servidor local de Streamlit. Ejecutá el siguiente comando **en la misma consola/terminal** para que la interfaz visual del chatbot se abra automáticamente en tu navegador web:
 ```bash
-streamlit run app.py
+python -m streamlit run app.py
 ```
+
+*(Nota: Dependiendo de cómo tengas configurado Python en tu sistema, si el comando de arriba te da problemas, también podés probar lanzarlo de forma directa ejecutando simplemente `streamlit run app.py`).*
 
 ## ⚠️ Limitaciones de la Versión Gratuita
 Al utilizar la capa gratuita de la API de Google Gemini, el sistema cuenta con restricciones en la cantidad de consultas permitidas por minuto (Requests Per Minute) y no soporta ráfagas masivas de preguntas en simultáneo. Este asistente fue desarrollado como una Prueba de Concepto (PoC) con fines demostrativos y académicos, por lo que está optimizado para pruebas funcionales individuales y no para un entorno de producción de alta demanda.
